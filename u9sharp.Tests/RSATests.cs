@@ -8,7 +8,7 @@ namespace u9sharp.Tests
     {
         private RSAEngine _engine;
         private RandomNumberGenerator _rng;
-        private int _keysize = 512;
+        private int _keysize = 1024;
 
         [SetUp]
         public void Setup()
@@ -44,7 +44,7 @@ namespace u9sharp.Tests
         [Retry(20)]
         public void EncryptDecrypt()
         {
-            RSAPrivateKey prv = new RSAPrivateKey(512);
+            RSAPrivateKey prv = new RSAPrivateKey(_keysize);
             _engine = new RSAEngine(prv);
 
             byte[] data = new byte[20];
