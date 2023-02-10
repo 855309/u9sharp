@@ -203,7 +203,7 @@ namespace u9sharp
 
         public static byte[] XOR(byte[] a, byte[] b)
         {
-            if (a.Length != b.Length) { throw new Exception("xor için uzunluklar aynı değil."); }
+            if (a.Length != b.Length) { throw new Exception("arrays are not in the same length"); }
 
             byte[] r = new byte[a.Length];
             for (int i = 0; i < a.Length; i++)

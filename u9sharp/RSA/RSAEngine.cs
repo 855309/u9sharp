@@ -61,7 +61,7 @@ namespace u9sharp.RSA
             if (publicKey == null) { return new byte[0]; }
 
             /* ----- EME-OAEP Encoding ----- */
-            string L = label ?? string.Empty;
+            byte[] L = (label == null) ? new byte[0] : Encoding.UTF8.GetBytes(label);
             int mLen = data.Length;
 
             int k = (int)(Helper.BitSize(publicKey.modulus) / 8);
@@ -70,7 +70,7 @@ namespace u9sharp.RSA
             // SHA1, hLen = 20 (bytes), 160 (bits)
             Func<byte[], byte[]> hash_func = Helper.HashSHA1;
 
-            byte[] lHash = hash_func(Encoding.UTF8.GetBytes(L));
+            byte[] lHash = hash_func(L);
             int hLen = lHash.Length;
 
             if (mLen > k - (2 * hLen) - 2)
@@ -154,12 +154,12 @@ namespace u9sharp.RSA
             Array.Reverse(EM); // little endian yap (EM[0] == 0x0)
 
             /* ----- EME-OAEP Decoding ----- */
-            string L = label ?? string.Empty;
+            byte[] L = (label == null) ? new byte[0] : Encoding.UTF8.GetBytes(label);
 
             // SHA1, hLen = 20 (bytes), 160 (bits)
             Func<byte[], byte[]> hash_func = Helper.HashSHA1;
 
-            byte[] lHash = hash_func(Encoding.UTF8.GetBytes(L));
+            byte[] lHash = hash_func(L);
             int hLen = lHash.Length;
 
             if (cipher.Length != k || k < (2 * hLen) + 2)
@@ -199,6 +199,7 @@ namespace u9sharp.RSA
 
             if (!lHash.SequenceEqual(newlHash))
             {
+                Console.WriteLine("meh");
                 return DecryptionError();
             }
 
