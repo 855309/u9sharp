@@ -11,7 +11,7 @@ namespace u9sharp
 {
     public class Prime
     {
-        public static int round_num = 10; // yeterli olur heralde
+        public static int round_num = 10; // should be enough
 
         public static BigInteger NextBigInteger(RandomNumberGenerator rng, BigInteger minValue, BigInteger maxValue)
         {
