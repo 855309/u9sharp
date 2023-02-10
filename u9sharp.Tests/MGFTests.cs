@@ -14,11 +14,6 @@ namespace u9sharp.Tests
             (("bar", 50, Helper.HashSHA256), "382576a7841021cc28fc4c0948753fb8312090cea942ea4c4e735d10dc724b155f9f6069f289d61daca0cb814502ef04eae1")
         };
 
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
         public void Verify_MGF1()
         {
