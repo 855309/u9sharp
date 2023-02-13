@@ -5,6 +5,35 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>855309</Authors>
+    <Description>u9 cryptography library for C#.</Description>
+    <Copyright>https://github.com/855309/u9sharp/blob/main/LICENSE</Copyright>
+    <PackageProjectUrl>https://github.com/855309/u9sharp</PackageProjectUrl>
+    <PackageIcon>u9sharp.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/855309/u9sharp</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>rsa, encryption, decryption, aes, tls, ssl</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="u9sharp.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
