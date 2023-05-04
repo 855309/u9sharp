@@ -1,7 +1,8 @@
 # u9sharp
-[![](https://img.shields.io/nuget/v/u9sharp)](https://www.nuget.org/packages/u9sharp)
-![](https://img.shields.io/nuget/dt/u9sharp?color=success)
-![](https://img.shields.io/github/license/855309/u9sharp)
+[![](https://img.shields.io/nuget/v/u9sharp?logo=nuget)](https://www.nuget.org/packages/u9sharp)
+![](https://img.shields.io/nuget/dt/u9sharp?color=success&logo=nuget)
+![](https://img.shields.io/github/license/855309/u9sharp?logo=github)
+![](https://img.shields.io/github/actions/workflow/status/855309/u9sharp/dotnet.yml?logo=github)
 
 u9 cryptography library for C#. 
  
