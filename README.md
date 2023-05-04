@@ -1,4 +1,8 @@
 # u9sharp
+[![](https://img.shields.io/nuget/v/u9sharp)](https://www.nuget.org/packages/u9sharp)
+![](https://img.shields.io/nuget/dt/u9sharp?color=success)
+![](https://img.shields.io/github/license/855309/u9sharp)
+
 u9 cryptography library for C#. 
  
 Currently supports only RSA_OAEP but I will implement AES algorithm and TLS protocol.
